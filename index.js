@@ -13,10 +13,10 @@ require('dotenv').config({
 main().catch((err) => console.log(err));
 
 async function main() {
-  // await mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://sastajonathanjames:Lakhani%40123@cluster0.pic1vhl.mongodb.net/?retryWrites=true&w=majority', {
-  //   useNewUrlParser: true,
-  //   useUnifiedTopology: true,
-  // });
+  await mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://sastajonathanjames:Lakhani%40123@cluster0.pic1vhl.mongodb.net/?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
   console.log('connected');
 }
 
