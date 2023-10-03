@@ -27,6 +27,10 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('user', userSchema);
 
+server.get('/test', async (req, res) => {
+  res.json({ message: 'Welcome! Vercel deploy success.'})
+});
+
 server.post('/demo', async (req, res) => {
   let user = new User();
   user.username = req.body.username;
